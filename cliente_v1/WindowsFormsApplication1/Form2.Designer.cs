@@ -29,67 +29,36 @@ namespace WindowsFormsApplication1
         /// </summary>
         private void InitializeComponent()
         {
-            this.name = new System.Windows.Forms.Label();
-            this.password = new System.Windows.Forms.Label();
-            this.Registrate = new System.Windows.Forms.Button();
-            this.contrasena = new System.Windows.Forms.TextBox();
-            this.nombre = new System.Windows.Forms.TextBox();
+            this.components = new System.ComponentModel.Container();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.Puntos = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
-            // name
+            // timer1
             // 
-            this.name.AutoSize = true;
-            this.name.Location = new System.Drawing.Point(142, 66);
-            this.name.Name = "name";
-            this.name.Size = new System.Drawing.Size(78, 21);
-            this.name.TabIndex = 0;
-            this.name.Text = "Nombre:";
+            this.timer1.Enabled = true;
+            this.timer1.Interval = 200;
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
-            // password
+            // Puntos
             // 
-            this.password.AutoSize = true;
-            this.password.Location = new System.Drawing.Point(142, 117);
-            this.password.Name = "password";
-            this.password.Size = new System.Drawing.Size(106, 21);
-            this.password.TabIndex = 1;
-            this.password.Text = "Contraseña:";
-            // 
-            // Registrate
-            // 
-            this.Registrate.Location = new System.Drawing.Point(265, 195);
-            this.Registrate.Name = "Registrate";
-            this.Registrate.Size = new System.Drawing.Size(206, 53);
-            this.Registrate.TabIndex = 2;
-            this.Registrate.Text = "Registrate";
-            this.Registrate.UseVisualStyleBackColor = true;
-            this.Registrate.Click += new System.EventHandler(this.Registrate_Click);
-            // 
-            // contrasena
-            // 
-            this.contrasena.Location = new System.Drawing.Point(265, 112);
-            this.contrasena.Name = "contrasena";
-            this.contrasena.Size = new System.Drawing.Size(264, 22);
-            this.contrasena.TabIndex = 3;
-            // 
-            // nombre
-            // 
-            this.nombre.Location = new System.Drawing.Point(265, 66);
-            this.nombre.Name = "nombre";
-            this.nombre.Size = new System.Drawing.Size(264, 22);
-            this.nombre.TabIndex = 4;
+            this.Puntos.AutoSize = true;
+            this.Puntos.Location = new System.Drawing.Point(737, 399);
+            this.Puntos.Name = "Puntos";
+            this.Puntos.Size = new System.Drawing.Size(14, 16);
+            this.Puntos.TabIndex = 0;
+            this.Puntos.Text = "0";
             // 
             // Form2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackgroundImage = global::WindowsFormsApplication1.Properties.Resources.wallpaperbetter_com_1366x768;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.nombre);
-            this.Controls.Add(this.contrasena);
-            this.Controls.Add(this.Registrate);
-            this.Controls.Add(this.password);
-            this.Controls.Add(this.name);
+            this.Controls.Add(this.Puntos);
             this.Name = "Form2";
             this.Text = "Form2";
+            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.MoverJugador);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -97,10 +66,7 @@ namespace WindowsFormsApplication1
 
         #endregion
 
-        private System.Windows.Forms.Label name;
-        private System.Windows.Forms.Label password;
-        private System.Windows.Forms.Button Registrate;
-        private System.Windows.Forms.TextBox contrasena;
-        private System.Windows.Forms.TextBox nombre;
+        private System.Windows.Forms.Timer timer1;
+        private System.Windows.Forms.Label Puntos;
     }
 }
