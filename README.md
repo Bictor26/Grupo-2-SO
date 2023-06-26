@@ -47,3 +47,11 @@ Generada por Andrea
 Verificado por Víctor
 	
 Comunicado por Max:https://youtube.com/video/G7eKjg3Hf7Y/
+
+#Version final
+
+Generada por Andrea
+
+Verificada por Victor
+
+Comunicado por Max:https://youtu.be/MPCUjcQdLwE
